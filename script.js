@@ -8,22 +8,18 @@ var specialCharacter = ["!", "@", "#", "$", "%", "^", "&", "*", "<", ">","/", "~
 var upperLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X","Y", "Z"]
 var numericalCharacter = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
-
-// makes password to #password input form.
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-// draws a password content from the information retrieved by the functions
   passwordText.textContent = password;
 
 }
 
 
-
-// adds event listener to generate button.
+// adds event listener
 generateBtn.addEventListener("click", writePassword);
 
-
+// gets value from array
 function random(arr) {
   let randomindex = Math.floor(Math.random()*arr.length)
   return arr[randomindex]
@@ -37,7 +33,7 @@ function passwordOptions() {
     return passwordOptions()
   }
     
- 
+ // Prompts user for options
  let uppers = confirm("Would you like to include Uppercase Letters?")
  let lowers = confirm("Would you like to include Lowercase Letters?")
  let numbers = confirm("Would you like to include Numbers?")
@@ -48,7 +44,7 @@ function passwordOptions() {
   }
   return options
 }
-//These define the names of functions and objects in the code.
+//These define the names of functions and objects
 
 function generatePassword() {
   let options = passwordOptions();
