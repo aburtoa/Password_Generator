@@ -13,7 +13,7 @@ var numericalCharacter = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-// draws a password content from the information retrieved by the efunctions
+// draws a password content from the information retrieved by the functions
   passwordText.textContent = password;
 
 }
@@ -24,7 +24,6 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-//Defines a item as a value selected from specific array
 function random(arr) {
   let randomindex = Math.floor(Math.random()*arr.length)
   return arr[randomindex]
@@ -34,12 +33,11 @@ function passwordOptions() {
   //Prompts for password length
   let passwordLength = parseInt(prompt ("How many characters would you like your password ? (has to be between 8 and 128 characters)"));
   if (passwordLength < 8 || passwordLength > 128) {
-    alert ("Passwprd length must be between 8 to 128 Characters.")
+    alert ("Password length must be between 8 to 128 Characters.")
     return passwordOptions()
   }
     
  
-  //Prompt user for an upper alpha
  let uppers = confirm("Would you like to include Uppercase Letters?")
  let lowers = confirm("Would you like to include Lowercase Letters?")
  let numbers = confirm("Would you like to include Numbers?")
